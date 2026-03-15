@@ -8,6 +8,9 @@ jobs:
   publish:
     name: "Publish image to ghcr.io"
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
